@@ -11,6 +11,7 @@ const doneRoadmap = roadmap.filter(item => item.done).length;
 const progress = Math.round((doneRoadmap / roadmap.length) * 100);
 return (
       <aside className={`sidebar ${mobileNavOpen ? "sidebar-open" : ""}`}>
+        <div className="sidebar-scroll">
         <NavLink
           className="brand"
           to="/today"
@@ -203,6 +204,8 @@ return (
             ))}
           </div>
         </details>
+
+        </div>
 
         <div className="sidebar-bottom">
           <div className="sidebar-note">
