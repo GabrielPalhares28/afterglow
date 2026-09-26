@@ -41,3 +41,24 @@ h1 { margin-bottom: 5px; color: var(--text); font-family: 'Fraunces', serif; fon
 :root[data-theme='daylight'] .primary-button { color: white; background: #7658d6; }
 
 :root[data-theme='daylight'] .primary-button:hover { background: #6447c0; }
+.app-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 16px;
+
+  margin-left: 258px;
+  padding: 16px;
+  min-height: 100dvh;
+}
+
+.app-workspace .main-content {
+  min-width: 0;
+  margin-left: 0;
+}
+
+.app-workspace .moon-panel {
+  position: sticky;
+  top: 16px;
+  height: calc(100dvh - 32px);
+  min-height: 0;
+}

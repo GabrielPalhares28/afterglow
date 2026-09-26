@@ -11,6 +11,7 @@ import SummaryCards from "./components/SummaryCards";
 import TaskFilters from "./components/TaskFilters";
 import TaskCard from "./components/TaskCard";
 import TaskForm from "./components/TaskForm";
+import MoonPanel from './components/MoonPanel'
 
 function App() {
   const [sortBy, setSortBy] = useState<SortBy>("priority");
@@ -146,7 +147,7 @@ function App() {
           onClick={() => setMobileNavOpen(false)}
         />
       )}
-
+    <div className="app-workspace">
       <main className="main-content">
         <Topbar viewTitle={viewTitle} theme={theme} onToggleTheme={() => setTheme(theme === "midnight" ? "daylight" : "midnight")} onOpenMobileNav={() => setMobileNavOpen(true)} />
         <div className="page-wrap">
@@ -238,7 +239,8 @@ function App() {
           </Routes>
         </div>
       </main>
-
+      <MoonPanel />       
+      </div>
       <TaskForm editorOpen={editorOpen} editingTask={editingTask} onClose={() => setEditorOpen(false)} onSubmit={saveTask} />
     </div>
   );
