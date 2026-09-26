@@ -1,7 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
-import { FolderHeart, Moon, Plus, Sparkles, X } from "lucide-react";
+import { FolderHeart, Moon, Plus, X } from "lucide-react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import type { SortBy, Task, RoadmapItem } from "./types/task";
+import type { SortBy, Task, RoadmapItem, Category, Priority } from "./types/task";
 import { defaultTasks, defaultRoadmap, priorityOrder } from "./data/defaults";
 import { today } from "./utils/dates";
 import { useLocalStorage } from "./hooks/useLocalStorage";
