@@ -1,0 +1,51 @@
+.modal-backdrop { position: fixed; z-index: 12; inset: 0; display: grid; place-items: center; padding: 20px; background: rgba(5, 10, 19, .66); backdrop-filter: blur(5px); animation: fade-in .15s ease both; }
+
+.task-dialog { width: min(100%, 440px); max-height: min(90vh, 700px); padding: 23px; overflow-y: auto; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--surface-raised); box-shadow: var(--shadow); animation: dialog-in .2s ease both; }
+
+.dialog-heading { display: flex; align-items: start; justify-content: space-between; margin-bottom: 24px; }
+
+.dialog-kicker { color: var(--muted-dim); font-size: 8px; font-weight: 700; }
+
+.dialog-heading h2 { margin: 5px 0 0; color: var(--text); font-family: 'Fraunces', serif; font-size: 24px; font-weight: 500; }
+
+.form-label { display: block; margin: 15px 0 7px; color: var(--text-soft); font-size: 10px; font-weight: 600; }
+
+.form-label span { margin-left: 4px; color: var(--muted-dim); font-weight: 400; }
+
+.form-input, .select-control { width: 100%; border: 1px solid var(--line-strong); border-radius: 6px; color: var(--text); background: var(--surface); font-size: 11px; }
+
+.form-input { padding: 10px 11px; }
+
+.form-input::placeholder { color: var(--muted-dim); }
+
+.form-input:focus, .select-control:focus-within { border-color: rgba(167,139,250,.55); outline: none; }
+
+.title-input { height: 40px; font-size: 12px; }
+
+.notes-input { resize: vertical; line-height: 1.5; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.select-control { position: relative; display: flex; height: 38px; align-items: center; padding-right: 9px; }
+
+.select-control select { width: 100%; height: 100%; padding: 0 9px; appearance: none; border: 0; outline: 0; color: var(--text); background: transparent; font-size: 10px; }
+
+.select-control svg { flex: 0 0 auto; color: var(--muted); pointer-events: none; }
+
+.date-input { height: 38px; color-scheme: dark; }
+
+:root[data-theme='daylight'] .date-input { color-scheme: light; }
+
+.dialog-actions { display: flex; justify-content: end; gap: 8px; padding-top: 23px; margin-top: 20px; border-top: 1px solid var(--line); }
+
+.secondary-button { min-height: 37px; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 6px; color: var(--muted); background: transparent; font-size: 10px; }
+
+.secondary-button:hover { color: var(--text); background: var(--surface-hover); }
+
+@keyframes enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+@keyframes row-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+@keyframes dialog-in { from { opacity: 0; transform: translateY(8px) scale(.99); } to { opacity: 1; transform: translateY(0) scale(1); } }
