@@ -1,0 +1,116 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Afterglow: instalar dependências",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Afterglow: build de produção",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Afterglow: finalizar instalação",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"install",
+				"--no-audit",
+				"--no-fund",
+				"--progress=false"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Afterglow: instalar sem progresso",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"--no-audit",
+				"--no-fund",
+				"--progress=false"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Afterglow: validar build",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Afterglow: validar build",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Afterglow: testes",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"test"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Afterglow: testes",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"test"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Afterglow: servidor Vite",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"dev",
+				"--",
+				"--host",
+				"0.0.0.0"
+			],
+			"isBackground": true,
+			"problemMatcher": [
+				"$tsc-watch"
+			]
+		}
+	]
+}
