@@ -57,7 +57,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 button { cursor: pointer; }
 
 .app-shell { min-height: 100vh; background: var(--page); color: var(--text); }
-.sidebar { position: fixed; z-index: 8; inset: 0 auto 0 0; display: flex; width: 258px; flex-direction: column; padding: 27px 17px 15px; background: var(--sidebar); border-right: 1px solid var(--line); }
+.sidebar { position: fixed; z-index: 8; inset: 0 auto 0 0; height: 100dvh; overflow: hidden; display: flex; width: 258px; flex-direction: column; padding: 27px 17px 15px; background: var(--sidebar); border-right: 1px solid var(--line); }
 .brand { display: flex; align-items: center; gap: 10px; width: fit-content; margin: 0 0 39px 5px; color: var(--text); font-family: 'Fraunces', serif; font-size: 23px; font-weight: 500; text-decoration: none; letter-spacing: 0; }
 .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; color: var(--lumi); background: rgba(125, 211, 252, .1); border: 1px solid rgba(125, 211, 252, .17); border-radius: 11px; }
 .brand-period, .title-period { color: var(--lavender); }
@@ -79,7 +79,7 @@ button { cursor: pointer; }
 .category-link:hover, .category-selected { color: var(--text-soft); background: var(--surface-hover); }
 .category-dot { width: 7px; height: 7px; border-radius: 50%; }
 .dot-lilac { background: #b6a2fa; }.dot-blue { background: #7dd3fc; }.dot-green { background: #8dd4b3; }.dot-peach { background: #f0b99f; }
-.roadmap-panel { min-height: 0; margin-top: 26px; padding: 13px 10px 11px; overflow: auto; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; background: rgba(255,255,255,.018); border: 1px solid var(--line); border-radius: 8px; }
+.roadmap-panel { flex: 1 1 auto; min-height: 0; margin-top: 26px; padding: 13px 10px 11px; overflow: auto; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; background: rgba(255,255,255,.018); border: 1px solid var(--line); border-radius: 8px; }
 .roadmap-panel summary { display: flex; align-items: center; justify-content: space-between; color: var(--text-soft); font-size: 11px; font-weight: 600; list-style: none; cursor: pointer; }
 .roadmap-panel summary::-webkit-details-marker { display: none; }
 .roadmap-panel summary > span { display: flex; align-items: center; gap: 8px; }
@@ -99,7 +99,7 @@ button { cursor: pointer; }
 .roadmap-done { color: var(--muted-dim); }
 .roadmap-check { display: grid; flex: 0 0 13px; width: 13px; height: 13px; place-items: center; border: 1px solid var(--line-strong); border-radius: 4px; color: #101827; }
 .roadmap-done .roadmap-check { background: var(--green); border-color: var(--green); }
-.sidebar-bottom { margin-top: auto; padding-top: 13px; }
+.sidebar-bottom { flex-shrink: 0; margin-top: auto; padding-top: 13px; }
 .sidebar-note { display: flex; align-items: center; gap: 9px; padding: 11px 9px; margin-bottom: 11px; color: var(--muted); border-bottom: 1px solid var(--line); font-size: 10px; }
 .sidebar-note svg { color: var(--peach); }
 .profile-row { display: flex; align-items: center; gap: 9px; padding: 2px 3px; }
@@ -301,3 +301,6 @@ h1 { margin-bottom: 5px; color: var(--text); font-family: 'Fraunces', serif; fon
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+.sort-button select { min-width: 0; border: 0; outline-offset: 3px; color: inherit; background: transparent; font: inherit; cursor: pointer; }
+.sort-button select option { color: #182335; background: #f4f5f9; }
