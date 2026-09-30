@@ -1,5 +1,5 @@
 :root {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #f2f4fa;
   background: #101827;
   font-synthesis: none;
@@ -10,8 +10,8 @@
   --surface: #182335;
   --surface-raised: #1c293d;
   --surface-hover: #222f43;
-  --line: rgba(193, 205, 226, .09);
-  --line-strong: rgba(193, 205, 226, .14);
+  --line: rgba(193, 205, 226, 0.09);
+  --line-strong: rgba(193, 205, 226, 0.14);
   --text: #f2f4fa;
   --text-soft: #c7d0df;
   --muted: #8592a8;
@@ -21,19 +21,21 @@
   --lumi: #7dd3fc;
   --green: #8dd4b3;
   --peach: #f0b99f;
-  --shadow: 0 18px 54px rgba(2, 8, 19, .34);
+  --shadow: 0 18px 54px rgba(2, 8, 19, 0.34);
 }
 
-:root[data-theme='daylight'] {
+:root[data-theme="daylight"] {
   color: #293448;
-  background: #f4f5f9;
-  --page: #f4f5f9;
-  --sidebar: #eceef5;
-  --surface: #fff;
+  background: #eef0f5;
+
+  --page: #eef0f5;
+  --sidebar: #e6e8f0;
+  --surface: #f8f8fb;
   --surface-raised: #fff;
+
   --surface-hover: #f3f3fa;
-  --line: rgba(43, 53, 77, .09);
-  --line-strong: rgba(43, 53, 77, .15);
+  --line: rgba(43, 53, 77, 0.09);
+  --line-strong: rgba(43, 53, 77, 0.15);
   --text: #293448;
   --text-soft: #526078;
   --muted: #758098;
@@ -43,19 +45,47 @@
   --lumi: #2783a8;
   --green: #318462;
   --peach: #b76543;
-  --shadow: 0 18px 54px rgba(36, 45, 69, .12);
+  --shadow: 0 18px 54px rgba(36, 45, 69, 0.12);
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--page); }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--page);
+}
 
-button, input, textarea, select { font: inherit; }
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
 
-button { color: inherit; }
+button {
+  color: inherit;
+}
 
-button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 2px solid var(--lumi); outline-offset: 3px; }
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--lumi);
+  outline-offset: 3px;
+}
 
-button { cursor: pointer; }
+button {
+  cursor: pointer;
+}
 
-.app-shell { min-height: 100vh; background: var(--page); color: var(--text); }
+.app-shell {
+  min-height: 100vh;
+  background: var(--page);
+  color: var(--text);
+}
